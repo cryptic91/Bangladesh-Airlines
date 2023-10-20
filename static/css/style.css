@@ -1,0 +1,26 @@
+#bg{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#body {
+    background: #33475B;
+  }
+  p {
+       color: rgba(234, 240, 246, 0.8);
+      font-size: 48pt;
+      /* text-align: center; */
+  }
+
+#cell{
+	border:1px solid black;
+	background-color: rgba(255,255,255,0.5);
+	font-size: 21px;
+	font-family: Helvetica ;
+	color: black;
+	width: 90%;
+	margin: 5% auto;
+	margin-bottom: 5%;
+}
