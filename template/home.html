@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block body %}
+
+<!-- <div id="bg">
+    <img src="/static/img/a.jpg" class="background">    
+</div> -->
+
+<!-- <div class="container"> -->
+    <div class="progress-bar bg-light" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"><h5 style="color: rgb(228, 109, 144);">Home</h5></div>
+<!-- </div> -->
+
+<body id="bg" style="background-image: url('{% static 'img/a.jpg' %}');
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;">
+    
+</body>
+
+<!-- <div id="bg" style="background-image: url('{% static 'img/a.jpg' %}');">    
+</div> -->
+
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <figure class="text-end">
+        <blockquote class="blockquote">
+          <p style="font-size: 20px; color: white; text-decoration:burlywood;">"I heard an airplane passing overhead. I wished I was on it."_</p>
+        </blockquote>
+        <figcaption class="blockquote-footer" style="font-size: 14px; color:aliceblue">
+            Charles Bukowski <cite title="Source Title">__everydaypower__</cite>
+        </figcaption>
+      </figure>
+</div>
+
+<form method="POST">
+	{% csrf_token %}
+	<div align="center" style="color: rgb(0, 0, 0); text-decoration: aliceblue;" >
+		<br>
+		<br>
+		<br>
+		<br>
+    <div class="container">
+		<h1 class="hsty" id="he1" style="color: rgb(49, 150, 175);">Flight Booking</h1>
+		<table id="t1" width="600" border="2" cellpadding="5" cellspacing="5">
+			<!-- <thead> -->
+				<tr>
+					<th>Flight Number</th>
+					<th>Type</th>
+					<th>Origin</th>
+					<th>Destination</th>
+					<th>Departure Time</th>
+					<th>Arrival Time</th>
+					<th>Book</th>
+				</tr>
+			<!-- </thead> -->
+			<!-- <tbody> -->
+				<tr>
+						<!-- <td>Flight No</td> -->
+				<td><select name="FlightNo" class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
+					<option selected>FlightNo</option>
+					<option name="BA3882" value="BA3882">BA3882</option>
+					<option name="BA3871" value="BA3871">BA3871</option>
+					<option name="BA3333" value="BA3333">BA3333</option>
+					</select></td>
+				<!-- <td>Type</td> -->
+				<td><select name="Type" class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
+					<option selected>Type</option>
+					<option name="A" value="A">A</option>
+					<option name="B" value="B">B</option>
+					<option name="C" value="C">C</option>
+					</select></td>
+				<!-- <td>Origin</td> -->
+				<td><select name="Origin" class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
+					<option selected>Origin</option>
+					<option name="Dhaka" value="Dhaka">Dhaka</option>
+					<option name="Chattogram" value="Chattogram">Chattogram</option>
+					<option name="Khulna" value="Khulna">Khulna</option>
+					</select></td>
+				<!-- <td>Destination</td> -->
+				<td><select name="Destination" class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
+					<option selected>Destination</option>
+					<option name="Dhaka" value="Dhaka">Dhaka</option>
+					<option name="Chattogram" value="Chattogram">Chattogram</option>
+					<option name="Khulna" value="Khulna">Khulna</option>
+					</select></td>
+				<!-- <td>DepartureTime</td> -->
+				<td><select name="DepartureTime" class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
+					<option selected>DepartureTime</option>
+					<option name="7am" value="7am">7:00 am</option>
+					<option name="9am" value="9am">9:00 am</option>
+					<option name="11am" value="11am">11:00 am</option>
+					<option name="1pm" value="1pm">1:00 pm</option>
+					<option name="3pm" value="3pm">3:00 pm</option>
+					<option name="5pm" value="5pm">5:00 pm</option>
+					<option name="7pm" value="7pm">7:00 pm</option>
+					</select></td>
+				<!-- <td>ArrivalTime</td> -->
+				<td><select name="ArrivalTime" class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
+					<option selected>ArrivalTime</option>
+					<option name="7am" value="7am">7:00 am</option>
+					<option name="9am" value="9am">9:00 am</option>
+					<option name="11am" value="11am">11:00 am</option>
+					<option name="1pm" value="1pm">1:00 pm</option>
+					<option name="3pm" value="3pm">3:00 pm</option>
+					<option name="5pm" value="5pm">5:00 pm</option>
+					<option name="7pm" value="7pm">7:00 pm</option>
+					</select></td>
+				<td>
+					<!-- <form method='GET' action='GDC-Book.php'> -->
+    				<!-- <input type='hidden' name='varname' value='$var_value'> -->
+    				<!-- <input type='submit' value='BOOK' style="background-color: rgb(127, 186, 206);;
+					color: aliceblue;"> -->
+					<input class="btn btn-primary" type="submit" value="Book">
+					<!-- </form> -->
+				</td>
+				<!-- <td><a href='GDC-Book.php?varname=<?php echo $var_value ?>'>Book</a></td>";*/ -->
+				</tr>
+							
+			<!-- </tbody> -->
+		</table>
+	</div>
+</form>
+
+
+{% endblock %}
